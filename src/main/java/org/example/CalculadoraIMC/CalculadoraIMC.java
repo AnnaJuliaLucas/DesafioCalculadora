@@ -1,8 +1,8 @@
 package org.example.CalculadoraIMC;
 
 import java.util.Scanner;
-
 import static java.lang.Math.round;
+
 
 public class CalculadoraIMC {
     private float peso;

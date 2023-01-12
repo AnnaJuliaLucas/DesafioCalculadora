@@ -2,6 +2,7 @@ package org.example;
 
 import org.example.CalculadoraBasica.CalculadoraBasica;
 import org.example.CalculadoraIMC.CalculadoraIMC;
+import org.example.CalculadoraImposto.CalculadoraImposto;
 
 import java.util.Scanner;
 
@@ -24,7 +25,9 @@ import java.util.Scanner;
                     case 2 :
                         CalculadoraIMC.operacoes();
                         break;
-                    //case 3 -> CalculadoraImpostoDeRenda.operacoes();
+                    case 3 :
+                        CalculadoraImposto.operacoes();
+                        break;
                     //case 4 -> CalculadoraGasolina.operacoes();
                     default:
                         System.out.println("Opção invalida! Tente novamente...");

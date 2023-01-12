@@ -3,7 +3,6 @@ package org.example.CalculadoraIMC;
 import java.util.Scanner;
 
 public class Usuario {
-    // Variáveis
     private String nome;
     private int idade;
     private CalculadoraIMC imcCalculadora;
