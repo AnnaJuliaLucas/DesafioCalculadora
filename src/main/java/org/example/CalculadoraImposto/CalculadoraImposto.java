@@ -74,9 +74,21 @@ public class CalculadoraImposto {
                 fisica.getRenda() + " reais BRUTOS POR MÊS, está na faixa de imposto de " + fisica.getPorcento() +
                 " % \nE, por isso, receberá LÍQUIDO de R$ " + df.format(fisica.getLiq()));
 
+        fisica.getVerifica();
+    }
 
-
-
+    public double VerificaImpostoMaior(){
+        DecimalFormat df = new DecimalFormat("#.##");
+        double impostoPJ = renda * 0.15;
+        double impostoPF = Calcula();
+        if(impostoPF < impostoPJ){
+            System.out.println("Você recebera mais dinheiro como PJ "); // + df.format(impostoPJ) + " (Imposto PF: " + df.format(impostoPF) + " )");
+        } else if (impostoPF > impostoPJ) {
+            System.out.println("Você recebera mais dinheiro como PF"); //+ df.format(impostoPF)+ " (Imposto PJ: " + df.format(impostoPF) + " )");
+        } else{
+            System.out.println("Os impostos de renda como PF e PJ são iguais"); // + df.format(impostoPF));
+        }
+        return impostoPJ;
     }
 
 }

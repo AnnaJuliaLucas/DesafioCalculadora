@@ -36,4 +36,8 @@ public class Pessoa {
         return calculadoraImposto.Porcent0(getRenda());
     }
 
+    public double getVerifica(){
+        return calculadoraImposto.VerificaImpostoMaior();
+    }
+
 }

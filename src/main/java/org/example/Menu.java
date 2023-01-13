@@ -1,6 +1,7 @@
 package org.example;
 
 import org.example.CalculadoraBasica.CalculadoraBasica;
+import org.example.CalculadoraGasolina.CalculadoraGasolina;
 import org.example.CalculadoraIMC.CalculadoraIMC;
 import org.example.CalculadoraImposto.CalculadoraImposto;
 
@@ -28,10 +29,20 @@ import java.util.Scanner;
                     case 3 :
                         CalculadoraImposto.operacoes();
                         break;
-                    //case 4 -> CalculadoraGasolina.operacoes();
+                    case 4 :
+                       CalculadoraGasolina.operacoes();
+                       break;
                     default:
                         System.out.println("Opção invalida! Tente novamente...");
                         return;
+                }
+
+                System.out.print("\n Deseja voltar ao menu principal (1) SIM ou (2)NÃO: ");
+                int resp = teclado.nextInt();
+                if(resp == 1){
+                    chamaMenu();
+                }else{
+                    System.out.println("OBRIGADA POR USAR NOSSA CALCULADORA!");
                 }
     }
 }
